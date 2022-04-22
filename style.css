@@ -1,0 +1,54 @@
+body {
+    background-color: aqua;
+}
+
+header {
+    text-align: center;
+}
+input[type = "text"]
+{
+    width: 100%;
+    height: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 5px;
+}
+
+#book-display {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    height: auto;
+    width: 80%;
+    margin: 10%;
+    border-style: solid;
+
+}
+.book-card {
+    background-color: gold;
+    position: relative;
+    border-style: solid;
+    width: 250px;
+    height: 300px;
+    margin: 10px;
+}
+
+.read-button {
+    position: absolute;
+    bottom: 0;
+}
+
+.book-info{
+    height: 80%;
+
+    font-size: 2vw;
+    font-family: 'Roboto';
+    text-align: center;
+}
