@@ -10,6 +10,7 @@
 
   <link href="./style.css" rel="stylesheet">
   <link href = "./modal.css" rel = "stylesheet">
+  <link href="./validation.css" rel="stylesheet">
 </head>
 
 <body>
@@ -21,38 +22,40 @@
                 <h2>Add a New Book</h2>
             </div>
             <div class="modal-body">
-                <form>
+                <form id = "new-book-form" novalidate>
                     <label>
                         Title:
-                        <input type ="text" id = "title-value" required>
+                        <input type ="text" id = "title" required>
                     </label>
                     <label>
                         Author:
-                        <input type ="text" id = "author-value" required>
+                        <input type ="text" id = "author" required>
                     </label>
                     <label>
                         Number of Pages:
-                        <input type ="number" id = "pages-value" required>
+                        <input type ="number" id = "pages" min = 1 required>
                     </label>
                     <label>
                         Read/Not Read yet?:
                         <label>Have Read
-                            <input type = "radio" name = "read-not_read" value = "Read" checked>
+                            <input type = "radio" name = "read-not_read" value = "Read" required>
                         </label>
                         <label>Have Not Read
                             <input type = "radio" name = "read-not_read" value = "Not Read">
                         </label>
-                    </label>
+                    </label>                        
+                    <span class="error" id = "error"aria-live="polite"></span>
                 </form>
             </div>
             <div class="modal-footer">
-                <button id = "submit-button">Submit to Library</button>
+                <button type = "submit" form = "new-book-form" id = "submit-button">Submit to Library</button>
             </div>
         </div>
     </div>
     <header><h1>My Library</h1></header>
     <div id = "book-display"></div>
-    <script src = "./modal.js"></script>
+    <script src = "form_validate.js"></script>
+    <script src = "modal.js"></script>
     <script src="script.js"></script>
 </body>
 
